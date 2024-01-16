@@ -1,0 +1,158 @@
+/* body {
+  font-family: "Roboto Slab", serif;
+  max-width: 1440px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+} */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 52px;
+  width: 100%;
+}
+
+nav > ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+nav li {
+  align-items: center;
+  list-style: none;
+  margin-right: 30px;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.nav-title {
+  display: flex;
+  align-items: center;
+}
+
+.title-h1 {
+  margin: 0;
+  padding: 0;
+}
+
+.title-img {
+  width: 48px;
+  height: 56px;
+  margin-left: 10px;
+}
+
+.banner-card {
+  position: relative;
+  margin-top: 50px;
+  width: 1200px;
+}
+
+.banner-card img {
+  max-width: 100%;
+  height: auto;
+  position: relative;
+  display: block;
+}
+
+/* .banner-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(19, 19, 24, 0.8) 0%,
+    rgba(19, 19, 24, 0) 100%
+  );
+} */
+
+.banner-text {
+  position: absolute;
+  top: 30%; /* Adjusted to center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(
+    -50%,
+    -50%
+  ); /* Center both vertically and horizontally */
+  color: rgb(255, 255, 255);
+  text-align: center; /* Center text within the banner */
+  padding: 20px;
+}
+
+.banner-text h2 {
+  font-size: 64px; /* Adjust the font size as needed */
+  margin-bottom: 5px;
+  font-weight: 800;
+}
+
+.banner-text p {
+  font-size: 16px; /* Adjust the font size as needed */
+  margin-bottom: 5px;
+}
+
+.input-container {
+  position: absolute;
+  width: 80%;
+  gap: 24px;
+  top: 70%; /* Adjusted the vertical position */
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  background: rgba(
+    146,
+    135,
+    135,
+    0.5
+  ); /* Added background color with transparency */
+  padding: 20px; /* Added padding for better visibility */
+  border-radius: 8px;
+}
+
+.input-field {
+  justify-content: space-between;
+  margin: 5px;
+  padding: 10px;
+  width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  gap: 24px;
+}
+
+.find-button {
+  margin: 5px;
+  padding: 10px;
+  background: #ff5400;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.find-button:hover {
+  background-color: #ed741d;
+}
+.search-icon {
+  margin-right: 8px; /* Adjusted the margin to the right of the icon */
+}
+
+/*-----Tours Section-----*/
+
+.tours {
+  display: flex;
+  margin-top: 100px;
+  gap: 100px;
+}
+
+.tours-content .tours-text {
+  padding: 30px;
+  margin-bottom: 20px;
+}
+
+.tours-content > ul > li {
+  padding: 5px;
+}
