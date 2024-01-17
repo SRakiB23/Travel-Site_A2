@@ -37,11 +37,11 @@ nav.navbar {
 
 .navbar ul {
   list-style: none;
-  width: 100%;
   margin: 0;
   padding: 0;
   display: flex;
   justify-content: flex-end;
+  gap: 35px;
 }
 
 .navbar li {
