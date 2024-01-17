@@ -1,3 +1,4 @@
+/* @import "/responsive.css"; */
 body {
   font-family: "Roboto Slab", serif;
   max-width: 1200px;
@@ -5,7 +6,6 @@ body {
   flex-direction: column;
   align-items: center;
   margin: 0 auto;
-  border: 1px solid #000000;
 }
 
 nav.navbar {
@@ -51,13 +51,16 @@ nav.navbar {
   font-size: 1rem;
 }
 
+.hamburger-icon {
+  font-size: 24px;
+  cursor: pointer;
+  display: none;
+}
+
 .banner-card {
   background-repeat: no-repeat;
   padding: 80px;
   border-radius: 16px;
-  /* position: relative; */
-  /* margin-top: 50px; */
-  /* width: 1200px; */
   background-image: linear-gradient(
       180deg,
       rgba(19, 19, 24, 0.8) 0%,
@@ -83,10 +86,6 @@ nav.navbar {
 }
 
 .banner-text {
-  /* position: absolute; */
-  /* top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); */
   color: rgb(255, 255, 255);
   text-align: center;
   padding: 20px;
@@ -106,12 +105,6 @@ nav.navbar {
 }
 
 .input-container {
-  /* position: absolute;
-  width: 80%;
-  gap: 24px;
-  top: 70%;
-  left: 50%;
-  transform: translateX(-50%); */
   text-align: center;
   background: rgba(146, 135, 135, 0.5);
   padding: 20px;
@@ -246,7 +239,7 @@ img {
   transform: translate(-50%, -50%);
   color: white;
   font-weight: 600;
-  font-size: 28px;
+  font-size: 24px;
 }
 
 /*-----Choose Us section-----*/
@@ -279,7 +272,10 @@ img {
 .choose-card-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto auto;
   gap: 20px;
+  align-items: flex-start;
+  justify-content: center;
 }
 
 .choose-card-container .card {
@@ -306,6 +302,9 @@ img {
   border-radius: 16px;
   border: 1px solid rgba(233, 68, 68, 0.2);
   background: rgba(233, 68, 68, 0.05);
+  grid-column: 1 / 3;
+  margin-left: 260px;
+  width: 580px;
 }
 
 /*------News Letter Section----*/
@@ -439,4 +438,200 @@ footer {
   width: 1100px;
   margin-top: 22px;
   color: rgba(255, 253, 253, 0.1);
+}
+/* Responsive*/
+
+/* Media Query for max-width: 576px */
+@media (max-width: 576px) {
+  body {
+    padding: 0;
+    width: 375px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navdiv {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+  }
+
+  .navbar ul {
+    display: none;
+    flex-direction: row;
+    width: 100%;
+    text-align: center;
+    background-color: #fff;
+  }
+
+  .navbar li {
+    margin: 100px 0;
+  }
+
+  .hamburger-icon {
+    display: flex;
+    flex-direction: row;
+    margin-top: 0px;
+    margin-right: 16px;
+  }
+
+  .banner-card {
+    padding: 10px;
+    margin-left: 0%;
+    margin-top: 0;
+    max-width: 95%;
+  }
+
+  .banner-text h2 {
+    font-size: 24px;
+    margin-top: 0;
+  }
+
+  .banner-text p {
+    font-size: 14px;
+    margin-bottom: 15px;
+    margin-top: 0;
+  }
+
+  .input-container {
+    padding: 0;
+    margin-top: 0;
+    align-items: center;
+  }
+
+  .input-field {
+    width: 100%;
+  }
+
+  .tours {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .tours-content {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .tours-img {
+    width: 100%;
+    height: auto;
+  }
+
+  .destination-section {
+    flex-direction: column;
+    padding: 0;
+    text-align: center;
+  }
+
+  .image-container {
+    text-align: center;
+  }
+
+  .title {
+    text-align: center;
+  }
+
+  .destination-img {
+    flex-direction: column;
+    margin-bottom: 16px;
+  }
+
+  .column-1,
+  .column-2,
+  .column-3 {
+    width: 100%;
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+
+  .image-name {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .title {
+    width: 100%;
+  }
+
+  .choose-card-container {
+    flex-direction: column;
+    display: flex;
+    padding: 0px;
+    grid-template-columns: 1fr;
+  }
+
+  .card-3 {
+    flex-direction: column;
+    width: 100%;
+    margin: 0%;
+    padding: 2px;
+  }
+
+  .newsletter {
+    flex-direction: column;
+    margin: 0;
+    padding: 10px;
+  }
+
+  .card {
+    margin-bottom: 20px;
+  }
+
+  .input-container-2 {
+    flex-direction: column;
+  }
+
+  .newsletter-img {
+    margin-bottom: 0;
+    max-height: 400px;
+  }
+
+  .save {
+    text-align: center;
+    color: white;
+    border-radius: 16px;
+    background: #ff5400;
+    width: 215px;
+    height: 80px;
+    transform: rotate(-19.628deg);
+    position: relative;
+    bottom: 120px;
+    left: 135px;
+  }
+
+  .save h1 {
+    font-size: 24px;
+    font-weight: 800;
+  }
+
+  .save h3 {
+    font-size: 16px;
+  }
+
+  .card {
+    margin-right: 0;
+    padding: 10px;
+  }
+
+  footer {
+    margin-top: 0px;
+    padding-top: 0px;
+    padding: 10px;
+    width: 100%;
+  }
+
+  .footer-divider {
+    max-width: 100%;
+  }
+
+  .footer-title {
+    margin-top: 10px;
+  }
 }
